@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <h1>React with Redux App</h1>
         <p>Welcome :??</p>
-        <Ninja />
+        <Ninja name="Rimuru" race="slime" age="22" />
       </header>
     </div>
   );
