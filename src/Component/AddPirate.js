@@ -15,10 +15,9 @@ class AddPirate extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log("this state", this.state);
+        this.props.addPirate(this.state)
     }
-    
+
 
  render() {
     return (

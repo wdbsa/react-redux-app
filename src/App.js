@@ -1,6 +1,6 @@
 import Ninja from './Component/Pirates';
 import React, { Component } from "react";
-import AddNinja from './Component/AddPirate';
+import AddPirate from './Component/AddPirate';
 
 class App extends Component {
   state = {
@@ -12,6 +12,18 @@ class App extends Component {
     ]
   }
 
+  addPirate = (pirate) => {
+   // console.log(pirate)
+    pirate.id = Math.random();
+    let pirateCopy = [...this.state.pirates, pirate];
+
+    this.setState({
+      pirates: pirateCopy
+    }); 
+
+    console.log(this.state.pirates);
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,7 +31,7 @@ class App extends Component {
           <h1>React with Redux App</h1>
           <p>Welcome :??</p>
           <Ninja pirates={ this.state.pirates }  />
-          <AddNinja />
+          <AddPirate addPirate={ this.addPirate }  />
         </header>
       </div>
     );  
