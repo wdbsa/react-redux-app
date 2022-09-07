@@ -1,13 +1,14 @@
-import Ninja from './Component/Ninja';
+import Ninja from './Component/Pirates';
 import React, { Component } from "react";
+import AddNinja from './Component/AddPirate';
 
 class App extends Component {
   state = {
-    ninjas: [
-      { name: "Rimuru", race: "Slime", id: 1  },
-      { name: "Benimaru", race: "Ogre", id: 2  },
-      { name: "Noir", race: "Primodial Demon", id: 3  },
-      { name: "Veldora", race: "Dragon", id: 4 }      
+    pirates: [
+      { name: "Monkey D. Luffy", crew: "Straw Hat", id: 1  },
+      { name: "Trafalgar D. Law", crew: "Heart Pirates", id: 2  },
+      { name: "Buggy Clown", crew: "The Buggy Pirates", id: 3  },
+      { name: "Shanks", crew: "Red-Hair Pirates", id: 4 }      
     ]
   }
 
@@ -17,7 +18,8 @@ class App extends Component {
         <header className="App-header">
           <h1>React with Redux App</h1>
           <p>Welcome :??</p>
-          <Ninja ninjas={ this.state.ninjas }  />
+          <Ninja pirates={ this.state.pirates }  />
+          <AddNinja />
         </header>
       </div>
     );  
