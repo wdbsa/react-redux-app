@@ -21,7 +21,22 @@ class App extends Component {
       pirates: pirateCopy
     }); 
 
-    console.log(this.state.pirates);
+   // console.log(this.state.pirates);
+  }
+
+
+  deletePirate = (id) => {
+//console.log(id);
+
+    let pirates = this.state.pirates.filter((pirate) => {
+      return pirate.id !== id;
+    });
+
+    this.setState({
+      pirates: pirates
+    })
+
+
   }
 
   render() {
@@ -30,7 +45,7 @@ class App extends Component {
         <header className="App-header">
           <h1>React with Redux App</h1>
           <p>Welcome :??</p>
-          <Ninja pirates={ this.state.pirates }  />
+          <Ninja pirates={ this.state.pirates }  deletePirate={ this.deletePirate }/>
           <AddPirate addPirate={ this.addPirate }  />
         </header>
       </div>
