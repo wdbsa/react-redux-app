@@ -1,4 +1,4 @@
-import Ninja from './Component/Pirates';
+import Pirate from './Component/Pirates';
 import React, { Component } from "react";
 import AddPirate from './Component/AddPirate';
 
@@ -45,7 +45,7 @@ class App extends Component {
         <header className="App-header">
           <h1>React with Redux App</h1>
           <p>Welcome :??</p>
-          <Ninja pirates={ this.state.pirates }  deletePirate={ this.deletePirate }/>
+          <Pirate pirates={ this.state.pirates }  deletePirate={ this.deletePirate }/>
           <AddPirate addPirate={ this.addPirate }  />
         </header>
       </div>
